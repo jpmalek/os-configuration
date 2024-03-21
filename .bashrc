@@ -143,7 +143,7 @@ if [ "$color_prompt" = yes ]; then
     fi
 
     # Set the prompt format
-    PS1="${WHITE}# ${RED}\u ${GREEN}[${CONDA_ENV}] ${RED}[\D{%a %d %Y-%m-%d %H:%M:%S}] ${WHITE}\w:${WHITE}"
+    PS1="${WHITE}#${RED}[\u]${GREEN}[${CONDA_ENV}]${RED}[\D{%a %d %Y-%m-%d %H:%M:%S}]${WHITE}\w:${WHITE}"
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
