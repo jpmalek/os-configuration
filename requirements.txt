@@ -1,0 +1,7 @@
+Requests
+selenium
+chromedriver_py
+boto3
+botocore
+pandas
+pytz

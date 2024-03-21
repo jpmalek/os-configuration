@@ -1,5 +1,6 @@
 #!/bin/bash
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y && sudo apt-get upgrade -y
+# Anaconda takes many GB of space!
 # The anaconda-navigator package is installed by default with Anaconda Distribution and includes the 
 # dependency package qt. All of the dependencies for qt should also be installed by default, but installing
 # the following extended dependencies might be required for certain versions of Anaconda Distribution in order to 
