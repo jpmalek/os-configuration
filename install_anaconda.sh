@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get update -y && sudo apt-get upgrade -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get update -y && sudo apt-get upgrade -y
 # The anaconda-navigator package is installed by default with Anaconda Distribution and includes the 
 # dependency package qt. All of the dependencies for qt should also be installed by default, but installing
 # the following extended dependencies might be required for certain versions of Anaconda Distribution in order to 
@@ -26,3 +26,4 @@ fi
 # For example, Anaconda3-2023.09-0-Linux-x86_64.sh
 bash Anaconda3-2024.02-1-Linux-x86_64.sh  -b -p $HOME/anaconda3
 source ~/.bashrc
+df -h /
