@@ -39,4 +39,5 @@ sudo apt-get install -y unzip \
 
 # Upgrade pip
 sudo python3 -m pip install --upgrade pip
-sudo pip3 install --no-cache-dir -r requirements.txt
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+sudo pip3 install --no-cache-dir -r $DIR/requirements.txt
