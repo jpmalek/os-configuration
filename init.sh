@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y unattended-upgrades
+sudo DEBIAN_FRONTEND=noninteractive dpkg-reconfigure -f noninteractive unattended-upgrades
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y && sudo apt-get upgrade -y
 # capture the current directory in a variable for use in executing scripts in the same directory
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
