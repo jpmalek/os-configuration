@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "**** STARTING DOCKER SCRIPT ****"
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y && sudo apt-get upgrade -y
 # Install packages to allow apt to use a repository over HTTPS
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \

@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "**** STARTING INIT SCRIPT ****"
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y unattended-upgrades
 sudo DEBIAN_FRONTEND=noninteractive dpkg-reconfigure -f noninteractive unattended-upgrades
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y && sudo apt-get upgrade -y

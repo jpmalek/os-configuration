@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "**** STARTING STANDARD PACKAGES SCRIPT ****"
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get install -y unzip \
     curl\
