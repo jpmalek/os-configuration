@@ -1,6 +1,6 @@
 # alias for the following command: while true;do now=$(date);png=$(ping -c 1 google.com|tr '\n' ' '|sed -e 's/\-\-.*//g');echo -n $now:; echo ${png};sleep 1;done
 alias pingtest="while true; do now=\$(date); png=\$(ping -c 1 google.com | tr '\n' ' ' | sed -e 's/--.*//g'); echo -n \$now: ; echo \${png}; sleep 1; done"
-# alias for a more detailed ls command
+# alias for a more detailed ls command 
 alias ls="ls -lsa"
 # The setopt PROMPT_SUBST command in a .zshrc file enables prompt substitution in the Z shell (zsh). 
 # This means that it allows for the evaluation of variables and command substitutions directly within the prompt. 
