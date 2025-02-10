@@ -1,5 +1,9 @@
-# alias for the following command: while true;do now=$(date);png=$(ping -c 1 google.com|tr '\n' ' '|sed -e 's/\-\-.*//g');echo -n $now:; echo ${png};sleep 1;done
-alias pingtest="while true; do now=\$(date); png=\$(ping -c 1 google.com | tr '\n' ' ' | sed -e 's/--.*//g'); echo -n \$now: ; echo \${png}; sleep 1; done"
+# alias for the following command: while true;do now=$(date);png=$(ping -c 1 8.8.8.8| grep -o "time=[0-9.]* ms");echo -n $now:; echo ${png};sleep 1;done
+alias pingtest="while true; do now=\$(date); png=\$(ping -c 1 8.8.8.8 | grep -o 'time=[0-9.]* ms'); echo -n \$now: ; echo \${png}; sleep 1; done"
+# alias for the following command: while true; do now=$(date +"%Y-%m-%d %H:%M:%S"); jitter=$(ping -c 60 8.8.8.8 | tail -1 | awk -F'/' '{print $NF}'); echo -n "$now: jitter: $jitter"; echo;done
+alias jittertest="while true; do now=\$(date); jitter=\$(ping -c 60 8.8.8.8 | tail -1 | awk -F'/' '{print \$NF}'); echo -n \"\$now: jitter: \$jitter\"; echo;done"
+# alias for the following command: while true;do now=$(date);png=$(networkQuality|tail -4 );echo -n $now:;echo; echo ${png};echo "=============";sleep 10;done
+alias speedtest="while true; do now=\$(date); png=\$(networkQuality | tail -4); echo -n \$now:; echo; echo \${png}; echo '============='; sleep 10; done"
 # alias for a more detailed ls command 
 alias ls="ls -lsa"
 # The setopt PROMPT_SUBST command in a .zshrc file enables prompt substitution in the Z shell (zsh). 
